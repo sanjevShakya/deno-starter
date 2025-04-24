@@ -1,4 +1,4 @@
-const preCommitPath = ".git/hooks/pre-commit";
+const preCommitPath = '.git/hooks/pre-commit';
 const content = `#!/bin/sh
 echo "🔍 Running Deno format check..."
 deno fmt --check || {
@@ -15,4 +15,4 @@ echo "✅ All checks passed. Proceeding with commit."
 
 await Deno.writeTextFile(preCommitPath, content);
 await Deno.chmod(preCommitPath, 0o755);
-console.log("✅ Git pre-commit hook installed.");
+console.log('✅ Git pre-commit hook installed.');
